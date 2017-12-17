@@ -1,0 +1,25 @@
+<div class ="main">
+
+  <h1> Course List </h1>
+
+    <div class="addCourse">
+
+      <!-- here we need to bind the newCourse property here with input element, anything written in input elemnet text box, it has to 
+          available in data array -->
+
+        <input [(ngModel)] = "newCourse" placeholder="Add Course" class="addText">
+
+         <button (click) = "pushCourse()"> ClicktoAdd </button>
+
+    </div>
+
+    <ul>
+        <li *ngFor = "let i of courses">
+               {{i}} 
+          <!-- take the courses data from app.component.ts file , der we declared in array -->
+
+          <span>X</span>
+        </li>
+    </ul>
+
+</div>
